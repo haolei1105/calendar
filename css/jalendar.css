@@ -1,0 +1,423 @@
+.jalendar {
+    position: relative;
+    margin: 0 auto;
+}
+.jalendar .left {
+    float: left;
+}
+.jalendar .clear {
+    clear: both;
+}
+.jalendar .added-event {
+    display: none;
+}
+.jalendar-wood {
+    display: inline-block;
+    width:283px !important;
+    background-color:red;
+}
+.jalendar-wood .close-button {
+    position: absolute;
+    left: -36%;
+    top:-210%;
+    display: none;
+    cursor: pointer;
+    width: 50px;
+    height: 51px;
+    background: url(../images/cancel.png)no-repeat;
+    z-index:30;
+}
+.jalendar .wood-bottom {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+.jalendar-pages {
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    float: left;
+    height:100px;
+}
+.jalendar .pages-bottom {
+    position: absolute;
+    border-radius: 0 0 2px 2px;
+    height: 4px;
+    bottom: -4px;
+    left: 1%;
+    width: 98%;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.5), inset 0 1px 2px rgba(0,0,0,0.5);
+    background: #fff;
+    display: none;
+}
+.jalendar-pages > .header {
+    text-align: center;
+    background-color: #2582ea !important;
+    position: relative;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+.jalendar-pages > .header h1 {
+    margin: 4px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    font: 24px "Roboto", Arial, Helvetica, Geneva, sans-serif;
+    color: #fff;
+    text-shadow: 0 -1px 3px rgba(0,0,0,0.5);
+}
+.jalendar-pages > .header .prv-m, 
+.jalendar-pages > .header .nxt-m {
+    text-decoration: none;
+    width: 31px;
+    position: absolute;
+    display: inline-block;
+    height: 31px;
+    background: url('../images/jalendar-sprite.png') no-repeat;
+    top: 8px;
+    cursor: pointer;
+}
+.jalendar-pages > .header .prv-m {
+    background-position: 0 0;
+    left: 20px;
+}
+.jalendar-pages > .header .nxt-m {
+    background-position: -34px 0;
+    right: 20px;
+}
+.jalendar-pages > .header .day-names {
+    margin: 10px 10px 0 10px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+}
+.jalendar-pages > .header h2 {
+    display: inline-block;
+    width: 14%;
+	float:left;
+    text-indent: 1px;
+    text-align: center;
+    margin: 0;
+    background: url('../images/jalendar-sprite.png') no-repeat 0 -41px;
+    height: 22px;
+    font: 13px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    text-shadow: 0 1px 0 #000;
+    color: #fff;
+}
+.jalendar .header h2:first-child {
+    background: none !important;
+}
+.jalendar .total-bar {
+    display: none;
+    margin: 12px 15px;
+    background-color: rgba(0,0,0,0.06);
+    border-radius: 30px;
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.3);
+    padding: 6px 12px;
+    color: #666;
+    font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.jalendar .total-bar b {
+    color: #65c2c0;
+    text-shadow: 0 1px 1px rgba(255,255,255,1);
+}
+.jalendar .days {
+    margin: 2px -6px 20px 0px;
+    font-size: 0;
+    text-align: center;
+}
+.jalendar .days .day {
+    display: inline-block;
+    width: 14%;
+	*width:9%;
+	float:left;
+    height: 30px;
+	overflow:hidden;
+    padding: 5px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    font: 14px "Roboto", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #666;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.jalendar.mid .days .day {
+    height: 20px;
+    font-size: 12px;
+    padding-top: 3px;
+}
+.jalendar .days .day:hover {
+	background-color:yellow;
+}
+.jalendar .days .day.selected {
+    box-shadow: inset 0 5px 15px rgba(255,255,255,0.4), inset 0 -10px 10px rgba(0,0,0,0.2);
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+}
+.jalendar .days .day:nth-child(7n+1) {
+    border-left: 1px solid #e0e0e0;
+}
+.jalendar .days .day:nth-last-child(1),
+.jalendar .days .day:nth-last-child(2),
+.jalendar .days .day:nth-last-child(3),
+.jalendar .days .day:nth-last-child(4),
+.jalendar .days .day:nth-last-child(5),
+.jalendar .days .day:nth-last-child(6),
+.jalendar .days .day:nth-last-child(7) {
+    border-bottom: 1px solid #e0e0e0;
+}
+.jalendar .days .day.today.selected {
+    color: #fff !important;
+}
+.jalendar .days .day > .event-single {
+    display: none;
+}
+.jalendar .days .day.selected > i {
+    display: none;
+}
+.jalendar .days .day > i {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(../images/jalendar-sprite.png) 0 -580px;
+}
+.jalendar .days .day > i.in {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(../images/jalendar-sprite.png) -14px -580px;
+}
+
+.jalendar .add-event {
+    float: right;
+    display: none;
+    width: 350px !important;
+    height:400px;
+    position: absolute;
+    left:-155%;
+    top:-200%;
+    background-color:#FFFFFF;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 9px 10px rgba(0,0,0,0.5);
+}
+.jalendar .add-new {
+    width:300px;
+    background-color:#FFFFFF;
+    margin:15px auto;
+    padding: 10px 10px 6px 10px;
+    /* border-radius: 0 0 3px 3px; */
+    /* box-shadow: 0 2px 3px rgba(0,0,0,0.5); */
+    position: relative;
+}
+.jalendar .add-new input[type="text"] {
+    padding:0px 10px;
+    box-sizing: border-box;
+    border: none;
+    width:88%;
+    border-radius: 30px;
+    box-shadow: 0 2px 2px rgba(255,255,255,1), inset 0 2px 5px rgba(0,0,0,0.4);
+    font: 16px "Roboto", "Helvetica Neue", Arial;
+    color: #fff;
+    background-color: rgba(0,0,0,0.1);
+    outline: none;
+    margin: 0 0 15px 0;
+    line-height:30px;
+}
+.jalendar .add-new .submit {
+    position: absolute;
+    right: 6px;
+    top:122px;
+    background: url(../images/tj.png)no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    cursor: pointer;
+}
+.jalendar .add-new .submit:active {
+    background-position: -32px -614px;
+}
+.jalendar .add-time {
+    float: left;
+    width: 108px;
+    background: url(../images/jalendar-sprite.png) 0 -179px;
+    padding: 0 0 0 20px;
+    font: bold 13px "Helvetica Neue", Arial;
+    position: relative;
+    display:none;
+}
+.jalendar .add-time .disabled {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    cursor: not-allowed;
+}
+.jalendar .add-time .select {
+    background: url(../images/jalendar-sprite.png) right -250px repeat-x;
+    position: relative;
+    float: left;
+    border-radius: 2px;
+    border: 1px solid #999;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: 25px;
+    z-index: 9;
+    width: 42px;
+    text-align: center;
+}
+.jalendar .add-time .select span {
+    display: inline-block;
+    padding: 5px 20px 5px 7px;
+}
+.jalendar .add-time .select .dropdown {
+    position: absolute;
+    left: -1px;
+    width: 100%;
+    top: 27px;
+    text-align: center;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #999;
+    display: none;
+    height: 60px;
+    overflow-x: scroll;
+}
+.jalendar .add-time .select .dropdown .option {
+    padding: 5px 0;
+}
+.jalendar .add-time .select .dropdown .option:hover {
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4), inset 0 -1px 0 rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -14px 7px rgba(0,0,0,0.1), inset 0 14px 7px rgba(255,255,255,0.1);
+    color: #fff;
+}
+.jalendar .add-time .select + .left {
+    padding: 5px 4px 0 4px;
+}
+
+.jalendar .all-day {
+    float: right;
+    width: 115px;
+    font: bold 13px "Helvetica Neue", Arial;
+    display:none;
+}
+.jalendar .all-day fieldset {
+    background: url(../images/jalendar-sprite.png) 0 -492px repeat-x;
+    position: relative;
+    float: right;
+    border-radius: 2px;
+    border: 1px solid #999;
+    padding: 5px 7px;
+    cursor: pointer;
+    height: 15px;   
+}
+.jalendar .all-day fieldset .check {
+    float: left;
+    width: 18px; 
+    border-right: 1px solid #999;
+    display: inline-block;
+    height: 27px;
+    margin: -6px 0 0 0;
+    background: url(../images/jalendar-sprite.png) -2px -284px;
+    position: relative;
+}
+.jalendar .all-day fieldset .check span {
+    position: absolute;
+    left: 3px;
+    top: 11px;
+    border-radius: 2px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+}
+.jalendar .all-day fieldset label {
+    float: left;
+    padding: 0 0 0 5px;
+    cursor: pointer;
+}
+
+.jalendar .events {
+    height: 200px;
+    position: relative;
+}
+.jalendar .events h3 {
+    display: none;
+    background: url(../images/jalendar-sprite.png) center -532px no-repeat;
+    width: 100%;
+    font: 20px "Roboto", "Helvetica Neue", Arial;
+    color:#333;
+    text-shadow: 0 1px 1px #fff;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+.jalendar .events h3 span {
+    display: none;
+    background: url(../images/jalendar-wood-bg.png);
+    padding: 0 10px;
+}
+.jalendar .events .events-list {
+    height:200px;
+    width:330px;
+    overflow-x: auto;
+    margin:0 auto;
+    border-top:2px solid #EAEAEA;
+    padding: 2px 2px 0 2px;
+    position: relative;
+    z-index: 2;
+}
+.jalendar .events .gradient-wood {
+    position: absolute;
+    z-index: 1;
+    bottom: -39px;
+    display: none;
+}
+.jalendar .events .event-single {
+    background: url(../images/jalendar-sprite.png) 0 -90px;
+    border-radius: 7px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.75);
+    margin: 0 0 10px 0;
+    background-color:#f5f5f5; 
+}
+.jalendar .events .event-single p {
+    background-color:#f5f5f5; 
+    font: bold 13px "Helvetica Neue", Arial;
+    margin: 0;
+    color: #333;
+}
+.jalendar .events .event-single p a {
+    color: #454545;
+}
+.jalendar .events .event-single .details {
+    background-color:#f5f5f5;
+    padding: 5px 10px;
+    overflow: hidden;
+    
+}
+.jalendar .events .event-single .details .clock {
+    color: #333;
+    padding: 0 0 0 20px;
+    font: bold 12px "Helvetica Neue", Arial;
+    float: left;
+    display: inline-block;
+    width: 120px;
+    display: none;
+}
+.jalendar .events .event-single .details .erase {
+    background: url(../images/jalendar-sprite.png) 0 -217px;
+    float: right;
+    display: inline-block;
+    width: 11px;
+    height: 13px;
+    cursor: pointer;
+    margin-right:10px;
+}
+.major{margin-left:30px;}

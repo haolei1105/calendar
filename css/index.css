@@ -1,0 +1,96 @@
+body,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:12px;font-family:'AdobeHeitiStd';}
+ul,li{list-style:none;}
+img{border:none;}
+input,select,textarea{outline:none;border:none;background:none;}
+textarea{resize:none;}
+a{text-decoration:none;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.mainWidth{width:1200px;margin:0 auto;}
+.topBar{height:60px;background-color:#fff;line-height:81px;}
+.leftArea{float:left;}
+.rightArea{float:right;}
+.admin{margin-top:15px;}
+.rightArea p{color:#0665da;font-size:12px;}
+.rightArea p img{margin-left:10px;}
+.bot{min-width:1200px;height:3px;background:url(../images/headBg.png) repeat-x;}
+
+
+.navBox{height:50px;}
+.navBox ul li a{line-height:50px;display:inline-block;padding:0 14px;color:#33548b;font-size:16px;float:left;}
+.navBox ul li .active{color:#006cdb;}
+
+
+
+.about{min-width:1200px;height:677px;background:url(../images/BG.png) repeat-x;}
+.hr-25{height:25px;}
+.box1{height:194px;}
+.box1-item h3{color:#006cdb;font-size:16px;padding:27px 0 0 34px;}
+.box1 span{margin-left:10px;}
+.line div{width:16px;height:2px;float:left;margin-top:4px;}
+.red{background-color:#fa5575;margin-left:34px;}
+.blue{background-color:#3a7dff;margin-left:2px;}
+.box1-item p{font-family:'AdobeHeitiStd';font-size:12px;color:#34578e;padding-left:34px;}
+.ico{margin-right:35px;}
+.ico img{padding:46px 12px 0 0;}
+.box1-about,.box2{clear:both;}
+.one{height:70px;float:left;margin-left:34px;}
+.onebox1,.onebox5{background:url(../images/first.png) no-repeat;float:left;margin-top:16px;width:38px;height:38px;color:#fff;font-size:18px;text-align:center;line-height:38px;}
+.box1-about h3{color:#fff;font-size:18px;text-align:center;line-height:38px;}
+.pbox{width:120px;padding-left:16px;overflow:hidden;}
+.pbox a{font-size:14px;color:#34578e;}
+.onebox2,.onebox6{background:url(../images/second.png) no-repeat;float:left;margin-top:16px;width:38px;height:38px;color:#fff;font-size:18px;text-align:center;line-height:38px;}
+.onebox3,.onebox7{background:url(../images/third.png) no-repeat;float:left;margin-top:16px;width:38px;height:38px;color:#fff;font-size:18px;text-align:center;line-height:38px;}
+.onebox4,.onebox8{background:url(../images/fouth.png) no-repeat;float:left;margin-top:16px;width:38px;height:38px;color:#fff;font-size:18px;text-align:center;line-height:38px;}
+.list{margin-left:24px;}
+
+.hr-22{height:22px;}
+.box1,.inter,.warn,.system,.time{border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#fff;}
+.inter{width:554px;height:195px;}
+.sound{width:76px;height:87px;border-right:1px dashed #d2d2d2;margin:12px 0 0 34px;float:left;}
+.sound-list{float:left;padding:12px 0 0 22px;}
+.sound-list li a{line-height:22px;color:#34578e;font-size:14px;text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+
+.warn-about{float:left;margin-left:20px;}
+.warn{width:267px;height:195px;}
+.warnimg{width:88px;height:95px;margin:0 auto;}
+.warnimg img{padding-top:11px;}
+
+.box3-fir{float:left;}
+.text{margin:0 20px;}
+
+
+.system{width:329px;height:411px;}
+.system ul{width:262px;margin:27px auto;}
+.system-about li{height:36px;background:url(../images/yuan.png) no-repeat;margin-top:15px;}
+.system-about li img{margin-left:15px;}
+.system-about li a{line-height:34px;font-size:14px;color:#33548b;padding-left:10px;}
+
+
+.time{width:329px;height:195px;}
+.progra{width:46px;height:195px;background-color:#2582ea;border-radius:3px 0 0 3px;}
+.progra p{color:#fff;font-size:18px;line-height:26px;text-align:center;padding-top:24px;}
+.cale{width:283px;height:195px;}
+
+
+.footer{height:90px;background-color:#fff;overflow:hidden;}
+.footer-text{margin-top:26px;}
+.footer-text p{font-size:14px;color:#0665da;text-align:center;line-height:24px;}
+
+
+ 
+ .white_content { 
+            display: none; 
+            position: absolute; 
+            top: 25%; 
+            left: 25%; 
+            width: 55%; 
+            height: 70%;
+            border: 1px solid orange; 
+            background-color: white; 
+            z-index:1002; 
+            overflow: auto; 
+        }
+ .black_overlay a{float:right;margin:10px;}
